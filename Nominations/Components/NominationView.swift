@@ -15,7 +15,7 @@ struct NominationView: View {
     
     @State var inputText = ""
     
-    //        Instead of the this array the name field from api request is displayed
+    //        Instead of the this array the name field from api request is displayed.This is just for testing puropose actual data is the api.
     var options = ["option 1", "Option 2", "Option 3", "Option 4"]
     var process = ["Very Unfair", "Fair", "Not sure", "Fair", "Very Fair"]
     var icons = ["face.smiling.inverse"]

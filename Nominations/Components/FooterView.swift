@@ -38,6 +38,7 @@ struct FooterView: View {
             
         
 //            This is a Submit Nomination button
+//            it is activated when all other fields are filled by user input
             NavigationLink {
                 NominationSubmitView().navigationBarBackButtonHidden(true)
             } label: {

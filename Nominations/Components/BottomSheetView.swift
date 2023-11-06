@@ -31,10 +31,10 @@ struct BottomSheetView: View {
                 VStack{
 //                 dismiss the action sheet and navigate to home screen
 
-
+//TODO
                    NavigationLink {
                         
-                        ContentView()
+                       ContentView().navigationBarBackButtonHidden(true)
                         
                     } label: {
                         Text("Yes, leave page")

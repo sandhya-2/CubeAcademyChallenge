@@ -12,7 +12,7 @@ import SwiftUI
 struct CreateNominationView: View {
     
     var body: some View {
-        
+//Clicking this button will navigate to Create nomination screen.
         NavigationLink {
             NominationView().navigationBarBackButtonHidden(true)
         } label: {
