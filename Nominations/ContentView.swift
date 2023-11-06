@@ -9,13 +9,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let networkManager: NetworkManager
+    
     var body: some View {
         
         VStack(spacing: 0) {
             HeaderBarView()
+            
             NavigationStack{
                 ScrollView {
+
+                   
+                    
                     NominationsHeaderView()
+                }
+                //                    this is to test api data
+                Button("Make Api call"){
+                    networkManager.GetAllNominees()
                 }
                 CreateNominationView()
             }        }
@@ -25,5 +36,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(networkManager: NetworkManager())
 }

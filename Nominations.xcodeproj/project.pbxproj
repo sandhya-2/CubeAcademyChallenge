@@ -25,6 +25,10 @@
 		1BA8D9E42AE29ACD008FBB3F /* CubeFoundationSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA8D9E32AE29ACD008FBB3F /* CubeFoundationSwiftUI */; };
 		1BA8D9E62AE29AF7008FBB3F /* FontName+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */; };
 		1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */; };
+		84B533132AF9A05200081152 /* NominationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B533122AF9A05200081152 /* NominationResponse.swift */; };
+		84B533162AF9A0AA00081152 /* NominationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B533152AF9A0AA00081152 /* NominationViewModel.swift */; };
+		84B533192AF9A0FE00081152 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B533182AF9A0FE00081152 /* API.swift */; };
+		84B5331B2AF9A14100081152 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5331A2AF9A14100081152 /* NetworkManager.swift */; };
 		FA1851622AF63B8C0033CA36 /* CreateNominationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1851612AF63B8C0033CA36 /* CreateNominationView.swift */; };
 		FA1851642AF640370033CA36 /* NominationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1851632AF640360033CA36 /* NominationView.swift */; };
 		FA945D8C2AF6EEFB005A3E92 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA945D8B2AF6EEFB005A3E92 /* FooterView.swift */; };
@@ -52,6 +56,10 @@
 		1BA8D9DD2AE2962B008FBB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontName+Names.swift"; sourceTree = "<group>"; };
 		1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Styles.swift"; sourceTree = "<group>"; };
+		84B533122AF9A05200081152 /* NominationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationResponse.swift; sourceTree = "<group>"; };
+		84B533152AF9A0AA00081152 /* NominationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationViewModel.swift; sourceTree = "<group>"; };
+		84B533182AF9A0FE00081152 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		84B5331A2AF9A14100081152 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FA1851612AF63B8C0033CA36 /* CreateNominationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNominationView.swift; sourceTree = "<group>"; };
 		FA1851632AF640360033CA36 /* NominationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationView.swift; sourceTree = "<group>"; };
 		FA945D8B2AF6EEFB005A3E92 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
@@ -110,6 +118,9 @@
 				1BA8D9DD2AE2962B008FBB3F /* Info.plist */,
 				1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */,
 				1BA8D9BA2AE290D7008FBB3F /* ContentView.swift */,
+				84B533112AF9A02E00081152 /* Model */,
+				84B533142AF9A07A00081152 /* ViewModel */,
+				84B533172AF9A0DE00081152 /* Networking */,
 				1B8FA0842AE2B69E009E185D /* Components */,
 				1BA8D9DE2AE29652008FBB3F /* Resources */,
 				1BA8D9BE2AE290DA008FBB3F /* Preview Content */,
@@ -165,6 +176,31 @@
 				1BA8D9CE2AE29617008FBB3F /* Fonts */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		84B533112AF9A02E00081152 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84B533122AF9A05200081152 /* NominationResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84B533142AF9A07A00081152 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84B533152AF9A0AA00081152 /* NominationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84B533172AF9A0DE00081152 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				84B533182AF9A0FE00081152 /* API.swift */,
+				84B5331A2AF9A14100081152 /* NetworkManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,17 +289,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1851622AF63B8C0033CA36 /* CreateNominationView.swift in Sources */,
+				84B533162AF9A0AA00081152 /* NominationViewModel.swift in Sources */,
 				1BA8D9BB2AE290D7008FBB3F /* ContentView.swift in Sources */,
+				84B533132AF9A05200081152 /* NominationResponse.swift in Sources */,
 				FA1851642AF640370033CA36 /* NominationView.swift in Sources */,
 				FA945D922AF7035E005A3E92 /* BottomView.swift in Sources */,
 				FA945D8C2AF6EEFB005A3E92 /* FooterView.swift in Sources */,
 				1B8FA0862AE2BB92009E185D /* NominationsHeaderView.swift in Sources */,
 				1B8FA0832AE2B69A009E185D /* HeaderBarView.swift in Sources */,
 				1BA8D9B92AE290D7008FBB3F /* NominationsApp.swift in Sources */,
+				84B5331B2AF9A14100081152 /* NetworkManager.swift in Sources */,
 				FAB1C5E62AF8C6E600F00949 /* BottomSheetView.swift in Sources */,
 				1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */,
 				1BA8D9E62AE29AF7008FBB3F /* FontName+Names.swift in Sources */,
 				FA945D8E2AF6F0CD005A3E92 /* NominationSubmitView.swift in Sources */,
+				84B533192AF9A0FE00081152 /* API.swift in Sources */,
 				1BA8D9CD2AE294B3008FBB3F /* FigmaShadow+Shadows.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

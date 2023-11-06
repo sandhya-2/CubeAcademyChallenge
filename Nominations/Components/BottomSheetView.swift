@@ -26,15 +26,15 @@ struct BottomSheetView: View {
                     .padding(.leading, 28)
                     .padding(.bottom, 20)
                 
-             Spacer()
-                  
+                Spacer()
+                
                 VStack{
-//                 dismiss the action sheet and navigate to home screen
-
-//TODO
-                   NavigationLink {
+                    //                 dismiss the action sheet and navigate to home screen
+                    
+                    //TODO
+                    NavigationLink {
                         
-                       ContentView().navigationBarBackButtonHidden(true)
+                        ContentView().navigationBarBackButtonHidden(true)
                         
                     } label: {
                         Text("Yes, leave page")
@@ -52,7 +52,7 @@ struct BottomSheetView: View {
                     //    Back to current view
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
-                       
+                        
                     } label: {
                         Text("Cancel")
                             .textCase(.uppercase)
@@ -64,8 +64,8 @@ struct BottomSheetView: View {
                             .border(.black, width: 2)
                             .background(.white)
                     }.padding(5)
-                
-
+                    
+                    
                     
                 } .padding(20)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -74,11 +74,11 @@ struct BottomSheetView: View {
                             .ignoresSafeArea()
                             .shadow(.light)
                     )
-                    
-            
+                
+                
             }
         }
-       
+        
     }
 }
 

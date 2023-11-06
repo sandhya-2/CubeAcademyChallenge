@@ -11,15 +11,15 @@ import SwiftUI
 /// Back button and Submit button are used on the create nomination screen
 
 struct FooterView: View {
-    @Environment(\.presentationMode) var presentationMode
+    
     @State var showingBottomSheet: Bool = false
     
     var body: some View {
         HStack{
-            
+            //            if one or more field is empty then action sheet is presented
             Button {
                 showingBottomSheet.toggle()
-//                self.presentationMode.wrappedValue.dismiss()
+                
             } label: {
                 Text("Back")
                     .textCase(.uppercase)
@@ -36,9 +36,9 @@ struct FooterView: View {
             }
             
             
-        
-//            This is a Submit Nomination button
-//            it is activated when all other fields are filled by user input
+            //        TODO
+            //            This is a Submit Nomination button
+            //            it is activated when all other fields are entered by the user
             NavigationLink {
                 NominationSubmitView().navigationBarBackButtonHidden(true)
             } label: {
@@ -50,8 +50,8 @@ struct FooterView: View {
                     .background(.gray)
                     .frame(width: 230, alignment: .center)
                     .background(.gray)
-
-            }
+                
+            }.disabled(true)
             
         }.padding(20)
             .frame(maxWidth: .infinity, alignment: .center)

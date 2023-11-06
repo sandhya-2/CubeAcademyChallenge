@@ -11,11 +11,11 @@ import SwiftUI
 struct NominationView: View {
     
     @State var isDropdownVisible: Bool = false
-    @State var selectedOption = "Select Option"   
+    @State var selectedOption = "Select Option"
     
     @State var inputText = ""
     
-    //        Instead of the this array the name field from api request is displayed.This is just for testing puropose actual data is the api.
+    //        Instead of the this array the name field from api request is displayed
     var options = ["option 1", "Option 2", "Option 3", "Option 4"]
     var process = ["Very Unfair", "Fair", "Not sure", "Fair", "Very Fair"]
     var icons = ["face.smiling.inverse"]
@@ -23,6 +23,7 @@ struct NominationView: View {
     var body: some View {
         
         VStack{
+            
             HeaderBarView(title: "Create a nomination")
             ScrollView {
                 Image("Nomination")
@@ -72,9 +73,9 @@ struct NominationView: View {
                                 .border(.gray)
                             
                             if isDropdownVisible{
-
-//                               TODO display drop down list items
-                              
+                                
+                                //                               TODO display drop down list items
+                                
                             }
                             
                         }
@@ -147,7 +148,7 @@ struct NominationView: View {
                                 Circle().stroke(.gray, lineWidth: 2)
                                     .frame(width: 20, height: 20)
                                     .padding(.horizontal, 25)
-                                    
+                                
                             }
                         }.frame(width: 380 , alignment: .center)
                             .frame(height: 55)
@@ -155,10 +156,7 @@ struct NominationView: View {
                             .border(.gray)
                             .padding([.leading, .trailing], 28)
                         
-                        
                     }
-                    
-                    
                     
                 }
                 
